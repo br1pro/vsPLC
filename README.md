@@ -1,12 +1,12 @@
-# swPLC
-swPLC is a software PLC developed in [node-red](https://nodered.org/) with a light and clean dashboard to monitor the PLC status and the memory registers set via Modbus TCP.
-The swPLC purpouse is to have a virtual ModbusTCP PLC that can be used in lab to demo or develop OT network traffic inspection. 
+# Virtual simple PLC
+vsPLC is a software PLC developed in [node-red](https://nodered.org/) with a light and clean dashboard to monitor the PLC status and the memory registers set via Modbus TCP.
+The vsPLC purpouse is to have a virtual ModbusTCP PLC that can be used in lab to demo or develop OT network traffic inspection. 
 
 ![swPLC dashboard](https://github.com/br1pro/swPLC/blob/main/Pictures/swPLC_dashboard.png)
 
 # How it works
-swPLC can be programmed via modbusTCP, it listen for ModbusTCP commands on port TCP502 (it can be customized in node-red configuration). 
-The swPLC has four Holding registers (address from 0 to 3) that can be set with integer values (0–255) and five Coil Registers that can be set with 0 or 1 bits values.
+vsPLC can be programmed via modbusTCP, it listen for ModbusTCP commands on port TCP502 (it can be customized in node-red configuration). 
+The vsPLC has four Holding registers (address from 0 to 3) that can be set with integer values (0–255) and five Coil Registers that can be set with 0 or 1 bits values.
 More Registers can be added if needed.
 
 # Dashboard
@@ -16,14 +16,14 @@ The dashboard shows the registers current values:
 
 # Installation istruction
 ## Pre-requesites
-Node-red need to be installed on the target machine, the following modules need to be installed before importing the swPLC flow:
+Node-red need to be installed on the target machine, the following modules need to be installed before importing the vsPLC flow:
 - node-red-contrib-modbus
 - node-red-contrib-buffer-parser
 - node-red-node-random
 - node-red-dashboard
 The procedure to import node-red modules can be find [here](https://nodered.org/docs/user-guide/editor/palette/manager). You can use palette manager to install all the modules. 
 ## Installation
-Import the swPLC flow json configuration into node-red, follow node-red instruction [here](https://nodered.org/docs/user-guide/editor/workspace/import-export)
+Import the vsPLC flow json configuration into node-red, follow node-red instruction [here](https://nodered.org/docs/user-guide/editor/workspace/import-export)
 
 
 
