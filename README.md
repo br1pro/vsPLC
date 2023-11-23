@@ -15,10 +15,14 @@ The dashboard shows the registers current values:
 
 # Installation
 ## Pre-requesites
-Node-red need to beinstalled on the target machine, the following modules need to be installed before importing the swPLC flow:
+Node-red need to be installed on the target machine, the following modules need to be installed before importing the swPLC flow:
 - node-red-contrib-modbus
 - node-red-contrib-buffer-parser
 - node-red-node-random
 - node-red-dashboard
+The procedure to import node-red modules can be find [here](https://nodered.org/docs/user-guide/editor/palette/manager). You can use palette manager to install all the modules. 
+### Installation
+Import the swPLC flow into node-red, follow node-red instruction [here](https://nodered.org/docs/user-guide/editor/workspace/import-export)
+
 
 
