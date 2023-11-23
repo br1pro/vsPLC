@@ -1,4 +1,4 @@
-# Virtual simple PLC
+# virtual simple PLC
 vsPLC is a software PLC developed in [node-red](https://nodered.org/) with a light and clean dashboard to monitor the PLC status and the memory registers set via Modbus TCP.
 The vsPLC purpouse is to have a virtual ModbusTCP PLC that can be used in lab to simulate a real PLC when you need to demo or develop tools for traffic inspection in OT environments. 
 
