@@ -9,8 +9,16 @@ The swPLC has four Holding registers (address from 0 to 3) that can be set with 
 More Registers can be added if needed.
 
 # Dashboard
-The dashboard shows the registers current value:
-- Coil Registers are showed on left side of the dashboard, each register value is showed (1/0)
-- Holding Registers are showed in the middle of the dashboard, each register value is showed with a gauge chart (gauge values can be customized)
+The dashboard shows the registers current values:
+- Coil Registers are showed on left side of the dashboard, each register value is showed (1/0).
+- Holding Registers are showed in the middle of the dashboard, each register value is showed with a gauge chart (gauge values can be customized), for each register a historic chart is showed with values registered in the last minute.
+
+# Installation
+## Pre-requesites
+Node-red need to beinstalled on the target machine, the following modules need to be installed before importing the swPLC flow:
+- node-red-contrib-modbus
+- node-red-contrib-buffer-parser
+- node-red-node-random
+- node-red-dashboard
 
 
