@@ -13,7 +13,7 @@ The dashboard shows the registers current values:
 - Coil Registers are showed on left side of the dashboard, each register value is showed (1/0).
 - Holding Registers are showed in the middle of the dashboard, each register value is showed with a gauge chart (gauge values can be customized), for each register a historic chart is showed with values registered in the last minute.
 
-# Installation
+# Installation istruction
 ## Pre-requesites
 Node-red need to be installed on the target machine, the following modules need to be installed before importing the swPLC flow:
 - node-red-contrib-modbus
