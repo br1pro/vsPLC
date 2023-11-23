@@ -23,7 +23,7 @@ Node-red need to be installed on the target machine, the following modules need 
 - node-red-dashboard
 The procedure to import node-red modules can be find [here](https://nodered.org/docs/user-guide/editor/palette/manager). You can use palette manager to install all the modules. 
 ## Installation
-Import the vsPLC flow json configuration into node-red, follow node-red instruction [here](https://nodered.org/docs/user-guide/editor/workspace/import-export)
+Import the vsPLC flow json configuration into node-red, follow node-red instructions [here](https://nodered.org/docs/user-guide/editor/workspace/import-export)
 
 # Operation
 One the json flow is deployed and started vsPLC is ready to run.
