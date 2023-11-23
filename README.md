@@ -5,7 +5,7 @@ The vsPLC purpouse is to have a virtual ModbusTCP PLC that can be used in lab to
 ![swPLC dashboard](https://github.com/br1pro/swPLC/blob/main/Pictures/swPLC_dashboard.png)
 
 # How it works
-vsPLC can be programmed via ModbusTCP, it listen for ModbusTCP commands on port TCP502 (it can be customized in node-red configuration). 
+vsPLC can be programmed via ModbusTCP, it listen for ModbusTCP commands on port TCP/502 (it can be customized in node-red configuration). 
 The vsPLC has four Holding Registers (address from 0 to 3) that can be set with integer values (0–255) and five Coil Registers that can be set with 0 or 1 bits values.
 More Registers can be added if needed.
 
@@ -21,6 +21,7 @@ Node-red need to be installed on the target machine, the following modules need 
 - node-red-contrib-buffer-parser
 - node-red-node-random
 - node-red-dashboard
+  
 The procedure to import node-red modules can be find [here](https://nodered.org/docs/user-guide/editor/palette/manager). You can use palette manager to install all the modules. 
 ## Installation
 Import the vsPLC flow json configuration into node-red, follow node-red instructions [here](https://nodered.org/docs/user-guide/editor/workspace/import-export)
