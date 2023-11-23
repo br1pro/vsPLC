@@ -27,6 +27,6 @@ Import the vsPLC flow json configuration into node-red, follow node-red instruct
 
 # Operation
 One the json flow is deployed and started vsPLC is ready to run.
-To open the vsPC dashboard open in a browser the page 'http://your_machine_ip:1880/ui' (port 1880 is the node-red starndard port). Https can be enabled in your node-red installation.
+To open the vsPC dashboard open in a browser the page `http://your_machine_ip:1880/ui` (port 1880 is the node-red starndard port). Https can be enabled in your node-red installation.
 
 
