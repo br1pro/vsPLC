@@ -1,0 +1,2158 @@
+[
+    {
+        "id": "fc6428e6e6c46f32",
+        "type": "tab",
+        "label": "swPLC",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "55b6a7cc3cc87f13",
+        "type": "inject",
+        "z": "fc6428e6e6c46f32",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 1330,
+        "y": 1680,
+        "wires": [
+            [
+                "82d7c85d91f5f25d"
+            ]
+        ]
+    },
+    {
+        "id": "82d7c85d91f5f25d",
+        "type": "function",
+        "z": "fc6428e6e6c46f32",
+        "name": "Set coils register 0",
+        "func": "msg.payload = { \n    'value': msg.payload, \n    'register': 'coils', \n    'address': 0 ,\n    'disablemsg' : 1\n} ;\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1510,
+        "y": 1660,
+        "wires": [
+            [
+                "862d27bf7f18939f"
+            ]
+        ]
+    },
+    {
+        "id": "5709fca549960c1e",
+        "type": "inject",
+        "z": "fc6428e6e6c46f32",
+        "name": "",
+        "props": [
+            {
+                "p": "payload",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "p": "topic",
+                "v": "",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0",
+        "payloadType": "num",
+        "x": 1330,
+        "y": 1640,
+        "wires": [
+            [
+                "82d7c85d91f5f25d"
+            ]
+        ]
+    },
+    {
+        "id": "5c4d013441d8cb02",
+        "type": "debug",
+        "z": "fc6428e6e6c46f32",
+        "name": "holding ",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2500,
+        "y": 1660,
+        "wires": []
+    },
+    {
+        "id": "48c671e2649b1d8a",
+        "type": "debug",
+        "z": "fc6428e6e6c46f32",
+        "name": "coils ",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2490,
+        "y": 1700,
+        "wires": []
+    },
+    {
+        "id": "f076ebe2ec034ffa",
+        "type": "debug",
+        "z": "fc6428e6e6c46f32",
+        "name": "input ",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 2490,
+        "y": 1740,
+        "wires": []
+    },
+    {
+        "id": "331547bddcca911c",
+        "type": "debug",
+        "z": "fc6428e6e6c46f32",
+        "name": "discrete inputs",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 2520,
+        "y": 1780,
+        "wires": []
+    },
+    {
+        "id": "05be9078a49dac88",
+        "type": "inject",
+        "z": "fc6428e6e6c46f32",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 1330,
+        "y": 1780,
+        "wires": [
+            [
+                "7d7eb38693bfadcc"
+            ]
+        ]
+    },
+    {
+        "id": "7d7eb38693bfadcc",
+        "type": "function",
+        "z": "fc6428e6e6c46f32",
+        "name": "Set discrete register 0",
+        "func": "msg.payload = { \n    'value': msg.payload, \n    'register': 'discrete', \n    'address': 0 ,\n    'disablemsg' : 1\n} ;\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1520,
+        "y": 1760,
+        "wires": [
+            [
+                "862d27bf7f18939f"
+            ]
+        ]
+    },
+    {
+        "id": "c013d03828855b96",
+        "type": "inject",
+        "z": "fc6428e6e6c46f32",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0",
+        "payloadType": "num",
+        "x": 1330,
+        "y": 1740,
+        "wires": [
+            [
+                "7d7eb38693bfadcc"
+            ]
+        ]
+    },
+    {
+        "id": "094eaca845308656",
+        "type": "inject",
+        "z": "fc6428e6e6c46f32",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 1330,
+        "y": 1880,
+        "wires": [
+            [
+                "65e51276003d53db"
+            ]
+        ]
+    },
+    {
+        "id": "65e51276003d53db",
+        "type": "function",
+        "z": "fc6428e6e6c46f32",
+        "name": "Set holding register 0",
+        "func": "msg.payload = { \n    'value': msg.payload, \n    'register': 'holding', \n    'address': 0 ,\n    'disablemsg' : 1\n} ;\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1520,
+        "y": 1860,
+        "wires": [
+            [
+                "862d27bf7f18939f"
+            ]
+        ]
+    },
+    {
+        "id": "3bda2d0aa4ba7c2a",
+        "type": "inject",
+        "z": "fc6428e6e6c46f32",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0",
+        "payloadType": "num",
+        "x": 1330,
+        "y": 1840,
+        "wires": [
+            [
+                "65e51276003d53db"
+            ]
+        ]
+    },
+    {
+        "id": "78b731087bf3e7ed",
+        "type": "inject",
+        "z": "fc6428e6e6c46f32",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 1330,
+        "y": 1980,
+        "wires": [
+            [
+                "19913aed0c4b47db"
+            ]
+        ]
+    },
+    {
+        "id": "19913aed0c4b47db",
+        "type": "function",
+        "z": "fc6428e6e6c46f32",
+        "name": "Set Input register 0",
+        "func": "msg.payload = { \n    'value': msg.payload, \n    'register': 'input', \n    'address': 0 ,\n    'disablemsg' : 1\n} ;\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1510,
+        "y": 1960,
+        "wires": [
+            [
+                "862d27bf7f18939f"
+            ]
+        ]
+    },
+    {
+        "id": "66b4d5373dd56571",
+        "type": "inject",
+        "z": "fc6428e6e6c46f32",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0",
+        "payloadType": "num",
+        "x": 1330,
+        "y": 1940,
+        "wires": [
+            [
+                "19913aed0c4b47db"
+            ]
+        ]
+    },
+    {
+        "id": "ffbbc44a9335dc8c",
+        "type": "function",
+        "z": "fc6428e6e6c46f32",
+        "name": "Set holding register 0",
+        "func": "msg.payload = { \n    'value': msg.payload, \n    'register': 'holding', \n    'address': 0 ,\n    'disablemsg' : 1\n} ;\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1540,
+        "y": 2020,
+        "wires": [
+            [
+                "862d27bf7f18939f"
+            ]
+        ]
+    },
+    {
+        "id": "c7f474efa2fcf800",
+        "type": "function",
+        "z": "fc6428e6e6c46f32",
+        "name": "Set holding register 2",
+        "func": "msg.payload = { \n    'value': msg.payload, \n    'register': 'holding', \n    'address': 2 ,\n    'disablemsg' : 1\n} ;\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1800,
+        "y": 2260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "955e2df94eeca9ea",
+        "type": "inject",
+        "z": "fc6428e6e6c46f32",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "0.1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1430,
+        "y": 2300,
+        "wires": [
+            [
+                "4a713b0eddf0f0a7"
+            ]
+        ]
+    },
+    {
+        "id": "faaaf3895a5cedf8",
+        "type": "comment",
+        "z": "fc6428e6e6c46f32",
+        "name": "Coil Add 0",
+        "info": "",
+        "x": 2160,
+        "y": 1820,
+        "wires": []
+    },
+    {
+        "id": "b70530f2ca20a8de",
+        "type": "comment",
+        "z": "fc6428e6e6c46f32",
+        "name": "Coil Add 1",
+        "info": "",
+        "x": 2180,
+        "y": 1940,
+        "wires": []
+    },
+    {
+        "id": "a39e840488e1b1ef",
+        "type": "comment",
+        "z": "fc6428e6e6c46f32",
+        "name": "Coil Add 2",
+        "info": "",
+        "x": 2200,
+        "y": 2040,
+        "wires": []
+    },
+    {
+        "id": "2ad8aafab00c3921",
+        "type": "comment",
+        "z": "fc6428e6e6c46f32",
+        "name": "Coil Add 3",
+        "info": "",
+        "x": 2180,
+        "y": 2120,
+        "wires": []
+    },
+    {
+        "id": "65b33ed36805e0d3",
+        "type": "comment",
+        "z": "fc6428e6e6c46f32",
+        "name": "Coil Add 4",
+        "info": "",
+        "x": 2180,
+        "y": 2240,
+        "wires": []
+    },
+    {
+        "id": "862d27bf7f18939f",
+        "type": "modbus-flex-server",
+        "z": "fc6428e6e6c46f32",
+        "name": "slave311",
+        "logEnabled": true,
+        "serverAddress": "0.0.0.0",
+        "serverPort": "502",
+        "responseDelay": 100,
+        "unitId": 1,
+        "delayUnit": "ms",
+        "coilsBufferSize": 20000,
+        "registersBufferSize": 20000,
+        "minAddress": 0,
+        "splitAddress": 10000,
+        "funcGetCoil": "function getFlexCoil(addr, unitID) {\n\tif (unitID === node.unitId && \n\t\taddr >= node.minAddress && \n\t\taddr <= node.splitAddress) { \n\n\t\treturn node.coils.readUInt8(addr * node.bufferFactor) \n\t}  \n}",
+        "funcGetDiscreteInput": "function getFlexDiscreteInput(addr, unitID) {\n\taddr += node.splitAddress\n\tif (unitID === node.unitId && \n\t\taddr >= node.splitAddress && \n\t\taddr <= node.splitAddress * 2) { \n\n\t\treturn node.coils.readUInt8(addr * node.bufferFactor) \n\t}  \n}",
+        "funcGetInputRegister": "function getFlexInputRegister(addr, unitID) { \n\tif (unitID === node.unitId && \n\t\taddr >= node.minAddress && \n\t\taddr <= node.splitAddress) { \n\n\t\treturn node.registers.readUInt16BE(addr * node.bufferFactor)  \n\t} \n}",
+        "funcGetHoldingRegister": "function getFlexHoldingRegsiter(addr, unitID) { \n\taddr += node.splitAddress\n\tif (unitID === node.unitId && \n\t\taddr >= node.splitAddress && \n\t\taddr <= node.splitAddress * 2) { \n\n\t\treturn node.registers.readUInt16BE(addr * node.bufferFactor)  \n\t} \n}",
+        "funcSetCoil": "function setFlexCoil(addr, value, unitID) { \n\tif (unitID === node.unitId && \n\t\taddr >= node.minAddress && \n\t\taddr <= node.splitAddress) { \n\n\t\tnode.coils.writeUInt8(value, addr * node.bufferFactor)  \n\t} \n}",
+        "funcSetRegister": "function setFlexRegister(addr, value, unitID) { \n\taddr += node.splitAddress\n\tif (unitID === node.unitId && \n\t\taddr >= node.splitAddress && \n\t\taddr <= node.splitAddress * 2) { \n\n\t\tnode.registers.writeUInt16BE(value, addr * node.bufferFactor)  \n\t} \n}",
+        "showErrors": true,
+        "x": 1880,
+        "y": 1680,
+        "wires": [
+            [
+                "5c4d013441d8cb02",
+                "79fb858676471312",
+                "b85616a55934fb6c",
+                "312eef483c7a2674",
+                "893eef1fa3264723"
+            ],
+            [
+                "48c671e2649b1d8a",
+                "1b80ea71b3f0e989",
+                "335d3f48d0ef828d",
+                "47199914a1556654",
+                "ed154a5e4d1abd84",
+                "8793e85485d09ec6"
+            ],
+            [
+                "f076ebe2ec034ffa"
+            ],
+            [
+                "331547bddcca911c"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "1b80ea71b3f0e989",
+        "type": "buffer-parser",
+        "z": "fc6428e6e6c46f32",
+        "name": "",
+        "data": "payload",
+        "dataType": "msg",
+        "specification": "spec",
+        "specificationType": "ui",
+        "items": [
+            {
+                "type": "int8",
+                "name": "item1",
+                "offset": 0,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "1",
+                "mask": ""
+            }
+        ],
+        "swap1": "",
+        "swap2": "",
+        "swap3": "",
+        "swap1Type": "swap",
+        "swap2Type": "swap",
+        "swap3Type": "swap",
+        "msgProperty": "payload",
+        "msgPropertyType": "str",
+        "resultType": "value",
+        "resultTypeType": "return",
+        "multipleResult": true,
+        "fanOutMultipleResult": false,
+        "setTopic": false,
+        "outputs": 1,
+        "x": 2150,
+        "y": 1880,
+        "wires": [
+            [
+                "6e7a23f15977b1e2"
+            ]
+        ]
+    },
+    {
+        "id": "335d3f48d0ef828d",
+        "type": "buffer-parser",
+        "z": "fc6428e6e6c46f32",
+        "name": "",
+        "data": "payload",
+        "dataType": "msg",
+        "specification": "spec",
+        "specificationType": "ui",
+        "items": [
+            {
+                "type": "int8",
+                "name": "item1",
+                "offset": 8,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "1",
+                "mask": ""
+            }
+        ],
+        "swap1": "",
+        "swap2": "",
+        "swap3": "",
+        "swap1Type": "swap",
+        "swap2Type": "swap",
+        "swap3Type": "swap",
+        "msgProperty": "payload",
+        "msgPropertyType": "str",
+        "resultType": "value",
+        "resultTypeType": "return",
+        "multipleResult": true,
+        "fanOutMultipleResult": false,
+        "setTopic": false,
+        "outputs": 1,
+        "x": 2150,
+        "y": 1980,
+        "wires": [
+            [
+                "18bdf8e2dcca9ebd"
+            ]
+        ]
+    },
+    {
+        "id": "47199914a1556654",
+        "type": "buffer-parser",
+        "z": "fc6428e6e6c46f32",
+        "name": "",
+        "data": "payload",
+        "dataType": "msg",
+        "specification": "spec",
+        "specificationType": "ui",
+        "items": [
+            {
+                "type": "int8",
+                "name": "item1",
+                "offset": 16,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "1",
+                "mask": ""
+            }
+        ],
+        "swap1": "",
+        "swap2": "",
+        "swap3": "",
+        "swap1Type": "swap",
+        "swap2Type": "swap",
+        "swap3Type": "swap",
+        "msgProperty": "payload",
+        "msgPropertyType": "str",
+        "resultType": "value",
+        "resultTypeType": "return",
+        "multipleResult": true,
+        "fanOutMultipleResult": false,
+        "setTopic": false,
+        "outputs": 1,
+        "x": 2155,
+        "y": 2077,
+        "wires": [
+            [
+                "432ae2326dda7e47"
+            ]
+        ]
+    },
+    {
+        "id": "ed154a5e4d1abd84",
+        "type": "buffer-parser",
+        "z": "fc6428e6e6c46f32",
+        "name": "",
+        "data": "payload",
+        "dataType": "msg",
+        "specification": "spec",
+        "specificationType": "ui",
+        "items": [
+            {
+                "type": "int8",
+                "name": "item1",
+                "offset": 24,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "1",
+                "mask": ""
+            }
+        ],
+        "swap1": "",
+        "swap2": "",
+        "swap3": "",
+        "swap1Type": "swap",
+        "swap2Type": "swap",
+        "swap3Type": "swap",
+        "msgProperty": "payload",
+        "msgPropertyType": "str",
+        "resultType": "value",
+        "resultTypeType": "return",
+        "multipleResult": true,
+        "fanOutMultipleResult": false,
+        "setTopic": false,
+        "outputs": 1,
+        "x": 2150,
+        "y": 2160,
+        "wires": [
+            [
+                "a226d5dbf195e954"
+            ]
+        ]
+    },
+    {
+        "id": "8793e85485d09ec6",
+        "type": "buffer-parser",
+        "z": "fc6428e6e6c46f32",
+        "name": "",
+        "data": "payload",
+        "dataType": "msg",
+        "specification": "spec",
+        "specificationType": "ui",
+        "items": [
+            {
+                "type": "int8",
+                "name": "item1",
+                "offset": 32,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "1",
+                "mask": ""
+            }
+        ],
+        "swap1": "",
+        "swap2": "",
+        "swap3": "",
+        "swap1Type": "swap",
+        "swap2Type": "swap",
+        "swap3Type": "swap",
+        "msgProperty": "payload",
+        "msgPropertyType": "str",
+        "resultType": "value",
+        "resultTypeType": "return",
+        "multipleResult": true,
+        "fanOutMultipleResult": false,
+        "setTopic": false,
+        "outputs": 1,
+        "x": 2150,
+        "y": 2300,
+        "wires": [
+            [
+                "6bf26ad796dcee27"
+            ]
+        ]
+    },
+    {
+        "id": "4a713b0eddf0f0a7",
+        "type": "random",
+        "z": "fc6428e6e6c46f32",
+        "name": "",
+        "low": 1,
+        "high": "200",
+        "inte": "true",
+        "property": "payload",
+        "x": 1640,
+        "y": 2360,
+        "wires": [
+            [
+                "c7f474efa2fcf800"
+            ]
+        ]
+    },
+    {
+        "id": "6e7a23f15977b1e2",
+        "type": "delay",
+        "z": "fc6428e6e6c46f32",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 2410,
+        "y": 1920,
+        "wires": [
+            [
+                "9135809e4a6ce1df"
+            ]
+        ]
+    },
+    {
+        "id": "9135809e4a6ce1df",
+        "type": "ui_text",
+        "z": "fc6428e6e6c46f32",
+        "group": "9ef0e2d1d03334af",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Coil Register address 0",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 2690,
+        "y": 1980,
+        "wires": []
+    },
+    {
+        "id": "49a3bd37b02dc652",
+        "type": "ui_text",
+        "z": "fc6428e6e6c46f32",
+        "group": "9ef0e2d1d03334af",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Coil Register address 1",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 2690,
+        "y": 2060,
+        "wires": []
+    },
+    {
+        "id": "18bdf8e2dcca9ebd",
+        "type": "delay",
+        "z": "fc6428e6e6c46f32",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 2410,
+        "y": 1980,
+        "wires": [
+            [
+                "49a3bd37b02dc652"
+            ]
+        ]
+    },
+    {
+        "id": "058d6b21e12dcd94",
+        "type": "ui_text",
+        "z": "fc6428e6e6c46f32",
+        "group": "9ef0e2d1d03334af",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Coil Register address 2",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 2690,
+        "y": 2140,
+        "wires": []
+    },
+    {
+        "id": "432ae2326dda7e47",
+        "type": "delay",
+        "z": "fc6428e6e6c46f32",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 2410,
+        "y": 2080,
+        "wires": [
+            [
+                "058d6b21e12dcd94"
+            ]
+        ]
+    },
+    {
+        "id": "8f641687b3d0a9d7",
+        "type": "ui_text",
+        "z": "fc6428e6e6c46f32",
+        "group": "9ef0e2d1d03334af",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Coil Register address 3",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 2690,
+        "y": 2220,
+        "wires": []
+    },
+    {
+        "id": "a226d5dbf195e954",
+        "type": "delay",
+        "z": "fc6428e6e6c46f32",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 2410,
+        "y": 2160,
+        "wires": [
+            [
+                "8f641687b3d0a9d7"
+            ]
+        ]
+    },
+    {
+        "id": "a6304c87676fa2d2",
+        "type": "ui_text",
+        "z": "fc6428e6e6c46f32",
+        "group": "9ef0e2d1d03334af",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Coil Register address 4",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 2690,
+        "y": 2360,
+        "wires": []
+    },
+    {
+        "id": "6bf26ad796dcee27",
+        "type": "delay",
+        "z": "fc6428e6e6c46f32",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 2410,
+        "y": 2300,
+        "wires": [
+            [
+                "a6304c87676fa2d2"
+            ]
+        ]
+    },
+    {
+        "id": "6ef2626dd050016c",
+        "type": "debug",
+        "z": "fc6428e6e6c46f32",
+        "name": "debug 8",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1740,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "5837779704432ac5",
+        "type": "delay",
+        "z": "fc6428e6e6c46f32",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1770,
+        "y": 360,
+        "wires": [
+            [
+                "b58b44a3db88218f",
+                "1b036476921dcd7b",
+                "69c74304408ce7cd",
+                "71187126cd604b7d"
+            ]
+        ]
+    },
+    {
+        "id": "b58b44a3db88218f",
+        "type": "function",
+        "z": "fc6428e6e6c46f32",
+        "name": "RGB color set",
+        "func": "var payload = msg.payload;\nvar result\nif (payload==0){\n    result=\"0,0,0\"\n}\nif (payload == 1) {\n    result = \"255,255,255\"\n}\nif (payload == 2) {\n    result = \"255,0,0\"\n}\nif (payload == 3) {\n    result = \"0,255,0\"\n}\nif (payload == 4) {\n    result = \"0,0,255\"\n}\nif (payload == 5) {\n    result = \"255,255,0\"\n}\nif (payload == 6) {\n    result = \"0,255,255\"\n}\nif (payload == 7) {\n    result = \"255,0,255\"\n}\nif (payload == 8) {\n    result = \"128,0,0\"\n}\nif (payload == 9) {\n    result = \"0,128,0\"\n}\nif (payload == 10) {\n    result = \"0,0,128\"\n}\nif (payload > 10) {\n    result = \"0,0,0\"\n}\nmsg.payload=result\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2000,
+        "y": 320,
+        "wires": [
+            [
+                "364714869a706f4c"
+            ]
+        ]
+    },
+    {
+        "id": "20bc37613e912227",
+        "type": "debug",
+        "z": "fc6428e6e6c46f32",
+        "name": "debug 9",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2320,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "364714869a706f4c",
+        "type": "rbe",
+        "z": "fc6428e6e6c46f32",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 2170,
+        "y": 320,
+        "wires": [
+            [
+                "20bc37613e912227"
+            ]
+        ]
+    },
+    {
+        "id": "96f8a47ea1128e9d",
+        "type": "comment",
+        "z": "fc6428e6e6c46f32",
+        "name": "Hold Reg Add 0",
+        "info": "",
+        "x": 1520,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "79fb858676471312",
+        "type": "buffer-parser",
+        "z": "fc6428e6e6c46f32",
+        "name": "",
+        "data": "payload",
+        "dataType": "msg",
+        "specification": "spec",
+        "specificationType": "ui",
+        "items": [
+            {
+                "type": "uint8",
+                "name": "item1",
+                "offset": 1,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "1",
+                "mask": ""
+            }
+        ],
+        "swap1": "",
+        "swap2": "",
+        "swap3": "",
+        "swap1Type": "swap",
+        "swap2Type": "swap",
+        "swap3Type": "swap",
+        "msgProperty": "payload",
+        "msgPropertyType": "str",
+        "resultType": "value",
+        "resultTypeType": "return",
+        "multipleResult": true,
+        "fanOutMultipleResult": false,
+        "setTopic": false,
+        "outputs": 1,
+        "x": 1510,
+        "y": 340,
+        "wires": [
+            [
+                "6ef2626dd050016c",
+                "5837779704432ac5"
+            ]
+        ]
+    },
+    {
+        "id": "1b036476921dcd7b",
+        "type": "ui_gauge",
+        "z": "fc6428e6e6c46f32",
+        "name": "",
+        "group": "4f308d284d36fba8",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Modbus Register Value",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "20",
+        "colors": [
+            "#00b500",
+            "#2ec27e",
+            "#e01b24"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 2210,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "69c74304408ce7cd",
+        "type": "ui_chart",
+        "z": "fc6428e6e6c46f32",
+        "name": "",
+        "group": "4f308d284d36fba8",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "Chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "20",
+        "removeOlder": "30",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "1",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 2230,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "71187126cd604b7d",
+        "type": "debug",
+        "z": "fc6428e6e6c46f32",
+        "name": "debug 10",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1860,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "7a08a4bc517bd23f",
+        "type": "inject",
+        "z": "fc6428e6e6c46f32",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1350,
+        "y": 2140,
+        "wires": [
+            [
+                "e2e8fc64b5a6580a"
+            ]
+        ]
+    },
+    {
+        "id": "e2e8fc64b5a6580a",
+        "type": "ui_digital_clock",
+        "z": "fc6428e6e6c46f32",
+        "name": "Clock",
+        "group": "9ef0e2d1d03334af",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "x": 1550,
+        "y": 2140,
+        "wires": []
+    },
+    {
+        "id": "8bad5bd8152842df",
+        "type": "debug",
+        "z": "fc6428e6e6c46f32",
+        "name": "debug 11",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2160,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "c1e9d73745aced6a",
+        "type": "delay",
+        "z": "fc6428e6e6c46f32",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 2190,
+        "y": 720,
+        "wires": [
+            [
+                "f0e7260e2a82916f",
+                "f2f37bb15c2460de",
+                "08460a77f0c198aa",
+                "462a65f47b060de3"
+            ]
+        ]
+    },
+    {
+        "id": "f0e7260e2a82916f",
+        "type": "function",
+        "z": "fc6428e6e6c46f32",
+        "name": "RGB color set",
+        "func": "var payload = msg.payload;\nvar result\nif (payload==0){\n    result=\"0,0,0\"\n}\nif (payload == 1) {\n    result = \"255,255,255\"\n}\nif (payload == 2) {\n    result = \"255,0,0\"\n}\nif (payload == 3) {\n    result = \"0,255,0\"\n}\nif (payload == 4) {\n    result = \"0,0,255\"\n}\nif (payload == 5) {\n    result = \"255,255,0\"\n}\nif (payload == 6) {\n    result = \"0,255,255\"\n}\nif (payload == 7) {\n    result = \"255,0,255\"\n}\nif (payload == 8) {\n    result = \"128,0,0\"\n}\nif (payload == 9) {\n    result = \"0,128,0\"\n}\nif (payload == 10) {\n    result = \"0,0,128\"\n}\nif (payload > 10) {\n    result = \"0,0,0\"\n}\nmsg.payload=result\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2420,
+        "y": 680,
+        "wires": [
+            [
+                "6ad2b8e78ffc3afb"
+            ]
+        ]
+    },
+    {
+        "id": "6b7090faf0d1dcac",
+        "type": "debug",
+        "z": "fc6428e6e6c46f32",
+        "name": "debug 12",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2740,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "6ad2b8e78ffc3afb",
+        "type": "rbe",
+        "z": "fc6428e6e6c46f32",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 2590,
+        "y": 680,
+        "wires": [
+            [
+                "6b7090faf0d1dcac"
+            ]
+        ]
+    },
+    {
+        "id": "2620422464cec3e5",
+        "type": "comment",
+        "z": "fc6428e6e6c46f32",
+        "name": "Hold Reg Add 1",
+        "info": "",
+        "x": 1940,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "312eef483c7a2674",
+        "type": "buffer-parser",
+        "z": "fc6428e6e6c46f32",
+        "name": "",
+        "data": "payload",
+        "dataType": "msg",
+        "specification": "spec",
+        "specificationType": "ui",
+        "items": [
+            {
+                "type": "uint8",
+                "name": "item1",
+                "offset": 9,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "1",
+                "mask": ""
+            }
+        ],
+        "swap1": "",
+        "swap2": "",
+        "swap3": "",
+        "swap1Type": "swap",
+        "swap2Type": "swap",
+        "swap3Type": "swap",
+        "msgProperty": "payload",
+        "msgPropertyType": "str",
+        "resultType": "value",
+        "resultTypeType": "return",
+        "multipleResult": true,
+        "fanOutMultipleResult": false,
+        "setTopic": false,
+        "outputs": 1,
+        "x": 1930,
+        "y": 700,
+        "wires": [
+            [
+                "8bad5bd8152842df",
+                "c1e9d73745aced6a"
+            ]
+        ]
+    },
+    {
+        "id": "f2f37bb15c2460de",
+        "type": "ui_gauge",
+        "z": "fc6428e6e6c46f32",
+        "name": "",
+        "group": "c916c0479d3163e4",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Modbus Register Value",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "20",
+        "colors": [
+            "#00b500",
+            "#2ec27e",
+            "#e01b24"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 2630,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "08460a77f0c198aa",
+        "type": "ui_chart",
+        "z": "fc6428e6e6c46f32",
+        "name": "",
+        "group": "c916c0479d3163e4",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "Chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "20",
+        "removeOlder": "30",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "1",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 2650,
+        "y": 840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "462a65f47b060de3",
+        "type": "debug",
+        "z": "fc6428e6e6c46f32",
+        "name": "debug 13",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2280,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "0e9e17ba4947d670",
+        "type": "debug",
+        "z": "fc6428e6e6c46f32",
+        "name": "debug 14",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2380,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "3482f1094fb0f840",
+        "type": "delay",
+        "z": "fc6428e6e6c46f32",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 2410,
+        "y": 1020,
+        "wires": [
+            [
+                "7434976ee1fd76ba",
+                "fee9bb19b35589c7",
+                "13bf7c3ca6a80148",
+                "c0d1cb1c9d7647b5"
+            ]
+        ]
+    },
+    {
+        "id": "7434976ee1fd76ba",
+        "type": "function",
+        "z": "fc6428e6e6c46f32",
+        "name": "RGB color set",
+        "func": "var payload = msg.payload;\nvar result\nif (payload==0){\n    result=\"0,0,0\"\n}\nif (payload == 1) {\n    result = \"255,255,255\"\n}\nif (payload == 2) {\n    result = \"255,0,0\"\n}\nif (payload == 3) {\n    result = \"0,255,0\"\n}\nif (payload == 4) {\n    result = \"0,0,255\"\n}\nif (payload == 5) {\n    result = \"255,255,0\"\n}\nif (payload == 6) {\n    result = \"0,255,255\"\n}\nif (payload == 7) {\n    result = \"255,0,255\"\n}\nif (payload == 8) {\n    result = \"128,0,0\"\n}\nif (payload == 9) {\n    result = \"0,128,0\"\n}\nif (payload == 10) {\n    result = \"0,0,128\"\n}\nif (payload > 10) {\n    result = \"0,0,0\"\n}\nmsg.payload=result\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2640,
+        "y": 980,
+        "wires": [
+            [
+                "d5ee0ccae8aee886"
+            ]
+        ]
+    },
+    {
+        "id": "e75d4362296b8ef2",
+        "type": "debug",
+        "z": "fc6428e6e6c46f32",
+        "name": "debug 15",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2960,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "d5ee0ccae8aee886",
+        "type": "rbe",
+        "z": "fc6428e6e6c46f32",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 2810,
+        "y": 980,
+        "wires": [
+            [
+                "e75d4362296b8ef2"
+            ]
+        ]
+    },
+    {
+        "id": "682a4a65145f552a",
+        "type": "comment",
+        "z": "fc6428e6e6c46f32",
+        "name": "Hold Reg Add 2",
+        "info": "",
+        "x": 2160,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "b85616a55934fb6c",
+        "type": "buffer-parser",
+        "z": "fc6428e6e6c46f32",
+        "name": "",
+        "data": "payload",
+        "dataType": "msg",
+        "specification": "spec",
+        "specificationType": "ui",
+        "items": [
+            {
+                "type": "uint8",
+                "name": "item1",
+                "offset": 17,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "1",
+                "mask": ""
+            }
+        ],
+        "swap1": "",
+        "swap2": "",
+        "swap3": "",
+        "swap1Type": "swap",
+        "swap2Type": "swap",
+        "swap3Type": "swap",
+        "msgProperty": "payload",
+        "msgPropertyType": "str",
+        "resultType": "value",
+        "resultTypeType": "return",
+        "multipleResult": true,
+        "fanOutMultipleResult": false,
+        "setTopic": false,
+        "outputs": 1,
+        "x": 2150,
+        "y": 1000,
+        "wires": [
+            [
+                "0e9e17ba4947d670",
+                "3482f1094fb0f840"
+            ]
+        ]
+    },
+    {
+        "id": "fee9bb19b35589c7",
+        "type": "ui_gauge",
+        "z": "fc6428e6e6c46f32",
+        "name": "",
+        "group": "2935f3849919fdaf",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Modbus Register Value",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "20",
+        "colors": [
+            "#00b500",
+            "#2ec27e",
+            "#e01b24"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 2850,
+        "y": 1080,
+        "wires": []
+    },
+    {
+        "id": "13bf7c3ca6a80148",
+        "type": "ui_chart",
+        "z": "fc6428e6e6c46f32",
+        "name": "",
+        "group": "2935f3849919fdaf",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "Chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "20",
+        "removeOlder": "30",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "1",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 2870,
+        "y": 1140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c0d1cb1c9d7647b5",
+        "type": "debug",
+        "z": "fc6428e6e6c46f32",
+        "name": "debug 16",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2500,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "a6c1013aacfdd98a",
+        "type": "debug",
+        "z": "fc6428e6e6c46f32",
+        "name": "debug 17",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2460,
+        "y": 1240,
+        "wires": []
+    },
+    {
+        "id": "32f6cb46e3161665",
+        "type": "delay",
+        "z": "fc6428e6e6c46f32",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 2490,
+        "y": 1300,
+        "wires": [
+            [
+                "ff9b3c7ebfcf2e46",
+                "c3cbbaa30e228777",
+                "b9b6cca8994ac169",
+                "513a5881d340fd4f"
+            ]
+        ]
+    },
+    {
+        "id": "ff9b3c7ebfcf2e46",
+        "type": "function",
+        "z": "fc6428e6e6c46f32",
+        "name": "RGB color set",
+        "func": "var payload = msg.payload;\nvar result\nif (payload==0){\n    result=\"0,0,0\"\n}\nif (payload == 1) {\n    result = \"255,255,255\"\n}\nif (payload == 2) {\n    result = \"255,0,0\"\n}\nif (payload == 3) {\n    result = \"0,255,0\"\n}\nif (payload == 4) {\n    result = \"0,0,255\"\n}\nif (payload == 5) {\n    result = \"255,255,0\"\n}\nif (payload == 6) {\n    result = \"0,255,255\"\n}\nif (payload == 7) {\n    result = \"255,0,255\"\n}\nif (payload == 8) {\n    result = \"128,0,0\"\n}\nif (payload == 9) {\n    result = \"0,128,0\"\n}\nif (payload == 10) {\n    result = \"0,0,128\"\n}\nif (payload > 10) {\n    result = \"0,0,0\"\n}\nmsg.payload=result\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2720,
+        "y": 1260,
+        "wires": [
+            [
+                "e4f70dd63920253d"
+            ]
+        ]
+    },
+    {
+        "id": "92f8e5c4783084e5",
+        "type": "debug",
+        "z": "fc6428e6e6c46f32",
+        "name": "debug 18",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 3040,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "e4f70dd63920253d",
+        "type": "rbe",
+        "z": "fc6428e6e6c46f32",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 2890,
+        "y": 1260,
+        "wires": [
+            [
+                "92f8e5c4783084e5"
+            ]
+        ]
+    },
+    {
+        "id": "39c54997f009c786",
+        "type": "comment",
+        "z": "fc6428e6e6c46f32",
+        "name": "Hold Reg Add 3",
+        "info": "",
+        "x": 2240,
+        "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "893eef1fa3264723",
+        "type": "buffer-parser",
+        "z": "fc6428e6e6c46f32",
+        "name": "",
+        "data": "payload",
+        "dataType": "msg",
+        "specification": "spec",
+        "specificationType": "ui",
+        "items": [
+            {
+                "type": "uint8",
+                "name": "item1",
+                "offset": 25,
+                "length": 1,
+                "offsetbit": 0,
+                "scale": "1",
+                "mask": ""
+            }
+        ],
+        "swap1": "",
+        "swap2": "",
+        "swap3": "",
+        "swap1Type": "swap",
+        "swap2Type": "swap",
+        "swap3Type": "swap",
+        "msgProperty": "payload",
+        "msgPropertyType": "str",
+        "resultType": "value",
+        "resultTypeType": "return",
+        "multipleResult": true,
+        "fanOutMultipleResult": false,
+        "setTopic": false,
+        "outputs": 1,
+        "x": 2230,
+        "y": 1280,
+        "wires": [
+            [
+                "a6c1013aacfdd98a",
+                "32f6cb46e3161665"
+            ]
+        ]
+    },
+    {
+        "id": "c3cbbaa30e228777",
+        "type": "ui_gauge",
+        "z": "fc6428e6e6c46f32",
+        "name": "",
+        "group": "c2fcb0ba1a8cd32c",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Modbus Register Value",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "20",
+        "colors": [
+            "#00b500",
+            "#2ec27e",
+            "#e01b24"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 2930,
+        "y": 1360,
+        "wires": []
+    },
+    {
+        "id": "b9b6cca8994ac169",
+        "type": "ui_chart",
+        "z": "fc6428e6e6c46f32",
+        "name": "",
+        "group": "c2fcb0ba1a8cd32c",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "Chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "20",
+        "removeOlder": "30",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "1",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 2950,
+        "y": 1420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "513a5881d340fd4f",
+        "type": "debug",
+        "z": "fc6428e6e6c46f32",
+        "name": "debug 19",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2580,
+        "y": 1380,
+        "wires": []
+    },
+    {
+        "id": "7b79a50a2db95dfd",
+        "type": "ui_text",
+        "z": "fc6428e6e6c46f32",
+        "group": "9ef0e2d1d03334af",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "vsPLC Status OK",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1410,
+        "y": 2200,
+        "wires": []
+    },
+    {
+        "id": "78d04f7213d9ddbf",
+        "type": "function",
+        "z": "fc6428e6e6c46f32",
+        "name": "Request Token",
+        "func": "msg.payload = {\n    \"client_id\": \"node-red-editor\",\n    \"grant_type\": \"password\",\n    \"scope\": \"*\",\n    \"username\": \"type or username\",\n    \"password\": \"type your password\"\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1380,
+        "y": 2460,
+        "wires": [
+            [
+                "426f2fd510634088"
+            ]
+        ]
+    },
+    {
+        "id": "33f40e83ccbf20ae",
+        "type": "inject",
+        "z": "fc6428e6e6c46f32",
+        "name": "Manual reload",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 1170,
+        "y": 2460,
+        "wires": [
+            [
+                "78d04f7213d9ddbf"
+            ]
+        ]
+    },
+    {
+        "id": "426f2fd510634088",
+        "type": "http request",
+        "z": "fc6428e6e6c46f32",
+        "name": "Token",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "http://localhost:1880/auth/token",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 1570,
+        "y": 2460,
+        "wires": [
+            [
+                "6a89cde9bef036b8"
+            ]
+        ]
+    },
+    {
+        "id": "6a89cde9bef036b8",
+        "type": "function",
+        "z": "fc6428e6e6c46f32",
+        "name": "Confirm token",
+        "func": "// get the status of the request\nvar status = msg.statusCode;\n//var token = {};\nvar token = '';\nmsg.headers ={};\n\n//let node = feedback;\n\nswitch(status){\n    case 200:\n        node.log(\"Secure restart\");\n        token = JSON.parse(msg.payload);\n        token = 'Bearer '+token.access_token;\n        msg.headers = {\n            \"Authorization\": token,\n            \"Node-RED-Deployment-Type\":\"reload\"\n        }\nmsg.payload =\"\";\n        break;\n    case 204:\n        node.log(\"Secure without restart\");\n        global.set('result','\tSuccess - with no further content');\n        break;\n    case 400:\n        node.warn(\"Bad request\");\n        break;\n    case 401:\n        node.warn(\"Not authorized\");\n        break;\n    case 403:\n        node.warn(\"Forbidden\");\n        break;\n    case 404:\n        node.log(\"Unsecure restart\");\n        msg.headers = {\n            \"Node-RED-Deployment-Type\":\"reload\"\n        }\n        break;\n    case 409:\n        node.warn(\"Version mismatch\");\n        break;\n    case 500:\n        node.error(\"Server Error\");\n        break;\n    default:\n        node.warn(\"Unknown Error\");\n       break;\n}\n\nmsg.payload = \"\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1760,
+        "y": 2460,
+        "wires": [
+            [
+                "73779ae1eee33d5b"
+            ]
+        ],
+        "info": "Restart of Node-Red flows.\nWill check if the action needs security or not.\nNote: if the first 5 attemps return a statuscode 403 'forbidden'\nthen the server will break and only way to recover is then to\nrestart the service"
+    },
+    {
+        "id": "73779ae1eee33d5b",
+        "type": "http request",
+        "z": "fc6428e6e6c46f32",
+        "name": "Restart",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://localhost:1880/flows",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1960,
+        "y": 2460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "668502c8ae315afd",
+        "type": "ui_button",
+        "z": "fc6428e6e6c46f32",
+        "name": "",
+        "group": "9ef0e2d1d03334af",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Reset",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 950,
+        "y": 2340,
+        "wires": [
+            [
+                "78d04f7213d9ddbf"
+            ]
+        ]
+    },
+    {
+        "id": "355b0b7db698303a",
+        "type": "ui_spacer",
+        "z": "fc6428e6e6c46f32",
+        "name": "spacer",
+        "group": "9ef0e2d1d03334af",
+        "order": 3,
+        "width": "4",
+        "height": "1"
+    },
+    {
+        "id": "9ef0e2d1d03334af",
+        "type": "ui_group",
+        "name": "vsPLC Status",
+        "tab": "432db9fa125f7429",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "4f308d284d36fba8",
+        "type": "ui_group",
+        "name": "Holding Register Address 0",
+        "tab": "432db9fa125f7429",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "c916c0479d3163e4",
+        "type": "ui_group",
+        "name": "Holding Register Address 1",
+        "tab": "432db9fa125f7429",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "2935f3849919fdaf",
+        "type": "ui_group",
+        "name": "Holding Register Address 2",
+        "tab": "432db9fa125f7429",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "c2fcb0ba1a8cd32c",
+        "type": "ui_group",
+        "name": "Holding Register Address 3",
+        "tab": "432db9fa125f7429",
+        "order": 6,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "432db9fa125f7429",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
