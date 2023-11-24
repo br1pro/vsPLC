@@ -7,7 +7,7 @@ The vsPLC purpouse is to have a virtual ModbusTCP PLC that can be used in lab to
 # How it works
 vsPLC can be programmed via ModbusTCP, it listen for ModbusTCP commands on port TCP/502 (it can be customized in node-red configuration). 
 The vsPLC has four Holding Registers (address from 0 to 3) that can be set with integer values (0–255) and five Coil Registers that can be set with 0 or 1 bits values.
-More Registers can be added if needed.
+Device ID is set to 1. More Registers can be added if needed.
 
 # Dashboard
 The dashboard shows the registers current values:
