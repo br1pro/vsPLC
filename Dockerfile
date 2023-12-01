@@ -14,7 +14,9 @@ RUN npm install node-red-node-random
 RUN npm install node-red-dashboard
 RUN npm install node-red-contrib-ui-digital-clock
 
+# Copy node-red flow as default
 COPY vsPLC/vsPLC.json /data/flows.json
 
-# Define volume for Node-RED userdata: Settings, flows, ...
-#VOLUME ["/data"]
+# Expose ports
+EXPOSE 1880/tcp
+EXPOSE 502/tcp

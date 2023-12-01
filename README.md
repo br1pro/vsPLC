@@ -14,20 +14,49 @@ The dashboard shows the registers current values:
 - Coil Registers are showed on left side of the dashboard, each register value is showed (1/0).
 - Holding Registers are showed in the middle of the dashboard, each register value is showed with a gauge chart (gauge values can be customized), for each register a historic chart is showed with values registered in the last minute.
 
-# Installation istruction
-## Pre-requesites
+# Installation instruction
+## Manual
+### Pre-requesites
 Node-red need to be installed on the target machine, the following modules need to be installed before importing the vsPLC flow:
 - node-red-contrib-modbus
 - node-red-contrib-buffer-parser
 - node-red-node-random
 - node-red-dashboard
+- node-red-contrib-ui-digital-clock
   
 The procedure to import node-red modules can be find [here](https://nodered.org/docs/user-guide/editor/palette/manager). You can use palette manager to install all the modules. Is suggested to run node-red as a service and to start on boot.
-## Installation
+### Installation
 Import the vsPLC flow json configuration into node-red, follow node-red instructions [here](https://nodered.org/docs/user-guide/editor/workspace/import-export)
 
+## Docker
+
+When using Docker, flow is automaticaly import.
+
+### Docker CLI
+
+```
+# docker run --rm -p 1880:1880 -p 502:502 --name vsPLC mguyard/vsplc:latest
+```
+
+### Docker Compose
+
+```
+version: "3.3"
+
+name: vsPLC
+services:
+    vsplc:
+        container_name: vsPLC
+        image: mguyard/vsplc:latest
+        ports:
+            - 1880:1880
+            - 502:502
+        restart: unless-stopped
+```
+
 # Operation
-One the json flow is deployed and started vsPLC is ready to run.
+
+Once the json flow is deployed and started vsPLC is ready to run.
 To open the vsPC dashboard open in a browser the page `http://your_machine_ip:1880/ui` (port 1880 is the node-red standard port). 
 Https can be enabled in your node-red installation, reference [here](https://nodered.org/docs/user-guide/runtime/securing-node-red).
 
