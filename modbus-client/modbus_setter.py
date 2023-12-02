@@ -33,9 +33,6 @@ import random
 from ipaddress import ip_address
 from pymodbus.constants import Defaults
 from pymodbus.client import ModbusTcpClient
-import atexit
-import signal
-import sys
 
 # The class `ConsoleColors` defines constants for different colors that can be used in the console
 # output.
