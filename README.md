@@ -60,4 +60,23 @@ Once the json flow is deployed and started vsPLC is ready to run.
 To open the vsPC dashboard open in a browser the page `http://your_machine_ip:1880/ui` (port 1880 is the node-red standard port). 
 Https can be enabled in your node-red installation, reference [here](https://nodered.org/docs/user-guide/runtime/securing-node-red).
 
+# Launch Modbus tests
 
+## Deploy Modbus script
+
+To set some modbus values visible in vsPLC, you can deploy a container with CLI below :
+
+```
+# docker run --rm -ti -e MODBUS_PLC=<your_vsPLC_docker_IP> --name modbus-client mguyard/modbus-client:latest
+```
+It's also possible to don't define environment variable ```-e MODBUS_PLC=<your_vsPLC_docker_IP>``` in Docker container creation but __run.py__ script will require an --ip argument.
+
+## Run Modbus script
+
+This command will prompt you a bash and you will be able to run ``` python3 run.py``` if MODBUS_PLC is define in docker environment variable.
+
+If MODBUS_PLC environement variable isn't define in Docker container, please use commande ``` python3 run.py --ip <your_vsPLC_docker_IP>```
+
+## Stop Modbus Script
+
+Press Enter to stop the script
