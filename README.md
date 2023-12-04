@@ -27,7 +27,7 @@ The procedure to import node-red modules can be find [here](https://nodered.org/
 Import the vsPLC flow json configuration into node-red, follow node-red instructions [here](https://nodered.org/docs/user-guide/editor/workspace/import-export)
 
 ## Docker version
-Build the vsplc image and call it vsplc running the following command:
+Build the vsplc image and call it "vsplc" in your running docker environment using the following command:
 - `docker build https://github.com/br1pro/vsplc.git#:docker -t vsplc`
 
 Run the docker image using the following command:
