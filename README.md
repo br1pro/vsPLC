@@ -33,7 +33,7 @@ Build the vsplc image and call it "vsplc" in your running docker environment usi
 Run the docker image using the following command:
 - `docker run --rm -p 1880:1880 -p 502:502 --name vsPLC vsplc`
 
-Kudos to mguyard for the support 🙂
+Kudos to [mguyard](https://github.com/mguyard) for the support 🙂
 
 # Operation
 One the json flow is deployed and started vsPLC is ready to run.
