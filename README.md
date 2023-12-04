@@ -14,7 +14,7 @@ The dashboard shows the registers current values:
 - Coil Registers are showed on left side of the dashboard, each register value is showed (1/0).
 - Holding Registers are showed in the middle of the dashboard, each register value is showed with a gauge chart (gauge values can be customized), for each register a historic chart is showed with values registered in the last minute.
 
-# Installation istruction
+# Installation istructions
 ## Pre-requesites
 Node-red need to be installed on the target machine, the following modules need to be installed before importing the vsPLC flow:
 - node-red-contrib-modbus
@@ -25,6 +25,12 @@ Node-red need to be installed on the target machine, the following modules need 
 The procedure to import node-red modules can be find [here](https://nodered.org/docs/user-guide/editor/palette/manager). You can use palette manager to install all the modules. Is suggested to run node-red as a service and to start on boot.
 ## Installation
 Import the vsPLC flow json configuration into node-red, follow node-red instructions [here](https://nodered.org/docs/user-guide/editor/workspace/import-export)
+
+## Docker version
+Build the vsplc image and call it vsplc running the following command:
+`docker build https://github.com/br1pro/vsplc.git#:docker -t vsplc`
+Run the docker image using the following command:
+`sudo docker run --rm -p 1880:1880 -p 502:502 --name vsPLC vsplc`
 
 # Operation
 One the json flow is deployed and started vsPLC is ready to run.
