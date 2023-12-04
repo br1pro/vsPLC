@@ -33,6 +33,8 @@ Build the vsplc image and call it "vsplc" in your running docker environment usi
 Run the docker image using the following command:
 - `docker run --rm -p 1880:1880 -p 502:502 --name vsPLC vsplc`
 
+Kudos to mguyard for the support 🙂
+
 # Operation
 One the json flow is deployed and started vsPLC is ready to run.
 To open the vsPC dashboard open in a browser the page `http://your_machine_ip:1880/ui` (port 1880 is the node-red standard port). 
