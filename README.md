@@ -28,9 +28,10 @@ Import the vsPLC flow json configuration into node-red, follow node-red instruct
 
 ## Docker version
 Build the vsplc image and call it vsplc running the following command:
-- docker build https://github.com/br1pro/vsplc.git#:docker -t vsplc
+- `docker build https://github.com/br1pro/vsplc.git#:docker -t vsplc`
+
 Run the docker image using the following command:
-- sudo docker run --rm -p 1880:1880 -p 502:502 --name vsPLC vsplc
+- `sudo docker run --rm -p 1880:1880 -p 502:502 --name vsPLC vsplc`
 
 # Operation
 One the json flow is deployed and started vsPLC is ready to run.
