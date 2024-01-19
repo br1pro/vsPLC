@@ -4,4 +4,4 @@ The vsPLC purpouse is to have a virtual ModbusTCP PLC that can be used in lab to
 
 ![swPLC dashboard](https://github.com/br1pro/swPLC/blob/main/Pictures/swPLC_dashboard.png)
 
-# Theproject was moved to gitlab: https://gitlab.com/br1pro/vsPLC
+# The project was moved to gitlab: https://gitlab.com/br1pro/vsPLC
